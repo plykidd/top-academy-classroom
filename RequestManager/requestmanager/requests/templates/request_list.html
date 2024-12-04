@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RequestManager</title>
+</head>
+<body>
+    <a href="http://127.0.0.1:8000/list">Добавить заявку</a>
+    <form method = post>
+        {% csrf_token %}
+        {% for req in requests %}
+            <p>{{ req.name }}</p>
+            <p>{{ req.email }}</p>
+            <p> {{req.message }}</p>
+        {% endfor %}
+    </form>
+
+</body>
+</html>

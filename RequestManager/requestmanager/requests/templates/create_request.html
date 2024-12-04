@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CreateRequest</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label>
+            {{form.name}}
+            {{form.email}}
+            {{form.message}}
+        </label>
+        <input type="submit">
+    </form>
+
+</body>
+</html>
